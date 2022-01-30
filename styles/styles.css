@@ -103,3 +103,21 @@ body {
   background-color: #FFE17F;
   vertical-align: middle;
 }
+
+.services {
+  background-color: #F0F0F0;
+}
+
+.services-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.services-description {
+  color: #444444;
+}
+
+.advantages-item {
+  background-color: #F0F0F0;
+}
