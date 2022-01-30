@@ -65,8 +65,41 @@ body {
 }
 
 .bestsellers-description {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
   color: #444444;
+}
+
+.property {
+  font-size: 16px;
+  color: #444444;
+}
+
+.property-value {
+  font-size: 36px;
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: inherit;
+  background-color: #FFE17F;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.categories-item-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.categories-item-image {
+  background-color: #FFE17F;
+  vertical-align: middle;
 }
