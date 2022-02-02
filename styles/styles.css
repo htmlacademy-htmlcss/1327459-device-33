@@ -155,9 +155,7 @@ body {
 }
 
 .delivery-companies-item {
-  font-family: "Rubik", sans-serif;
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #FFC700;
@@ -174,20 +172,17 @@ body {
 }
 
 .contacts-text {
-  font-family: "Rubik", sans-serif;
   color: #444444;
 }
 
 .contacts-subtitle {
-  font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 30px;
   color: #444444;
 }
 
 .contacts-address-text, .contacts-phone {
-  font-family: "Rubik", sans-serif;
+
   color: #444444;
   font-style: normal;
 }
@@ -207,7 +202,6 @@ body {
 }
 
 .newsletter-text {
-  font-family: "Rubik", sans-serif;
   color: #444444;
 }
 
@@ -226,7 +220,6 @@ body {
 }
 
 .footer-contacts-address-text {
-  font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 19px;
 }
@@ -242,7 +235,6 @@ body {
 }
 
 .footer-contacts-phone-number {
-  font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: inherit;
@@ -255,7 +247,6 @@ body {
 }
 
 .breadcrumbs-link {
-  font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 19px;
   color: inherit;
@@ -275,15 +266,12 @@ body {
 }
 
 .catalog-filter-legend {
-  font-family: "Rubik", sans-serif;
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
 
 .control-input {
-  font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 19px;
 }
@@ -295,9 +283,7 @@ body {
 }
 
 .product-card-link{
-  font-family: "Rubik", sans-serif;
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: inherit;
@@ -305,9 +291,7 @@ body {
 }
 
 .product-card-price {
-  font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 18px;
   line-height: 21px;
   color: #444444;
 }
