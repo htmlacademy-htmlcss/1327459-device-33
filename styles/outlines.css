@@ -1,25 +1,25 @@
 html {
-  outline: 5px solid rgb(35, 226, 10);
+  outline: 5px dashed rgb(35, 226, 10);
 }
 
 body {
-  outline: 2px solid red;
+  outline: 2px dashed red;
 }
 
 header {
-  outline: 2px solid blue;
+  outline: 2px dashed blue;
 }
 
 main {
-  outline: 2px solid green;
+  outline: 2px dashed green;
 }
 
 footer {
-  outline: 2px solid black;
+  outline: 1px dashed black;
 }
 
 section {
-  outline: 2px solid black;
+  outline: 1px dashed black;
 }
 
 div {
@@ -31,9 +31,13 @@ ul {
 }
 
 li {
-  outline: 1px solid #000000;
+  outline: 1px dashed #000000;
 }
 
 form {
+  outline: 2px dashed #FF1493;
+}
+
+span {
   outline: 2px dashed #FF1493;
 }
