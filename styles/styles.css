@@ -35,6 +35,10 @@ html {
 }
 
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -42,8 +46,65 @@ body {
   background-color: #ffffff;
 }
 
+/* Центровщик */
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/* Для реализации "sticky-footer" */
+.main-container {
+  flex-grow: 1;
+}
+
 .page-header {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
   background-color: #FFE17F;
+}
+
+/* Обертка "Поиск + навигация пользователя" */
+.navigation-user-container {
+  width: 1040px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+.search-form {
+  width: 517px;
+}
+
+.navigation-user {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/* Основная навигация */
+.navigation-list {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.navigation-item {
+  margin-right: 45px;
+}
+
+.navigation-item:first-child {
+  width: 293px;
+  margin-right: auto;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
 }
 
 .navigation-user-link {
