@@ -46,6 +46,17 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Центровщик */
 .page-container {
   width: 1160px;
@@ -209,7 +220,18 @@ body {
   background-color: #F0F0F0;
 }
 
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-item {
+  margin: 0;
+}
+
 .services-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -219,7 +241,15 @@ body {
   color: #444444;
 }
 
+.services-button-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .advantages-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -245,7 +275,12 @@ body {
   vertical-align: middle;
 }
 
+.about-contacts-container{
+  display: flex;
+}
+
 .about-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -297,12 +332,14 @@ body {
 }
 
 .newsletter-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .newsletter-text {
+  margin: 0;
   color: #444444;
 }
 
@@ -369,9 +406,12 @@ body {
 }
 
 .footer-social-list {
-  list-style: none;
   display: flex;
   padding: 0;
+}
+
+.footer-social-item {
+  width: 50px;
 }
 
 .footer-contacts-phone {
