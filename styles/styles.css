@@ -277,6 +277,11 @@ body {
 
 .about-contacts-container{
   display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 465px;
 }
 
 .about-title {
@@ -299,6 +304,10 @@ body {
 
 .delivery-companies {
   color: #000000;
+}
+
+.contacts {
+  width: 523px;
 }
 
 .contacts-title {
@@ -406,12 +415,13 @@ body {
 }
 
 .footer-social-list {
+  list-style-type: none;
   display: flex;
   padding: 0;
 }
 
 .footer-social-item {
-  width: 50px;
+  min-width: 40px;
 }
 
 .footer-contacts-phone {
@@ -424,10 +434,33 @@ body {
   color: inherit;
 }
 
+.inner-header {
+  box-sizing: border-box;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 35px 60px;
+}
+
 .categories-current {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  margin-right: 36px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs-link {
@@ -437,11 +470,7 @@ body {
   text-decoration: none;
 }
 
-.catalog-filter-container {
-  background-color: #F0F0F0;
-}
-
-.sorting-container {
+.catalog-products {
   background-color: #F0F0F0;
 }
 
@@ -451,6 +480,7 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-filter-legend {
@@ -485,6 +515,13 @@ body {
 }
 
 .product-list-button {
+  display: block;
+  box-sizing: border-box;
+  width: 760px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #FFFFFF;
+  border: 3px solid #F0F0F0;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -496,7 +533,13 @@ body {
 }
 
 .pagination {
-  background-color: #EBEBEB;
+  background-color: #F0F0F0;
+  margin: 0 auto;
+  padding: 0;
+  width: 760px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 .pagination-link {
