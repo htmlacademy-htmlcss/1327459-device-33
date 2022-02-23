@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/outlines.css">
+    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -71,13 +71,13 @@
               <div class="slider">
                 <h3 class="visually-hidden">Фотогалерея</h3>
                 <a class="slider-button slider-prev" href="#">
-                  <span class="visually-hidden">Предыдущее фото</span>
+                  <span class="">Предыдущее фото</span>
                 </a>
                 <a class="slider-image-link" href="#">
                   <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото товара">
                 </a>
                 <a class="slider-button slider-next" href="#">
-                  <span class="visually-hidden">Следующее фото</span>
+                  <span class="">Следующее фото</span>
                 </a>
               </div>
               <!--Див "Пагинация для слайдера"-->
@@ -85,17 +85,17 @@
                 <ol class="slider-pagination-list">
                   <li class="slider-pagination-item">
                     <a class="slider-pagination-button slider-pagination-button-current">
-                      <span class="visually-hidden">1 фото</span>
+                      <span class="">1 фото</span>
                     </a>
                   </li>
                   <li class="slider-pagination-item">
                     <a class="slider-pagination-button" href="#">
-                      <span class="visually-hidden">2 фото</span>
+                      <span class="">2 фото</span>
                     </a>
                   </li>
                   <li class="slider-pagination-item">
                     <a class="slider-pagination-button" href="#">
-                      <span class="visually-hidden">3 фото</span>
+                      <span class="">3 фото</span>
                     </a>
                   </li>
                 </ol>
@@ -151,30 +151,22 @@
           <h2 class="visually-hidden">Услуги</h2>
           <ul class="services-list">
             <li class="services-item">
-              <h3 class="services-title">Доставка</h3>
-              <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              <img class="services-image" src="images/services-delivery.svg" width="136" height="165" alt="Доставка">
-            </li>
-            <li class="services-item">
-              <h3 class="services-title">Гарантия</h3>
-              <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-              <img class="services-image" src="images/services-warranty.svg" width="171" height="195" alt="Гарантия">
-            </li>
-            <li class="services-item">
-              <h3 class="services-title">Кредит</h3>
-              <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-              <img class="services-image" src="images/services-credit.svg"  width="156" height="189" alt="Кредит">
-            </li>
-          </ul>
-          <ul class="services-button-list">
-            <li class="services-button-item">
-              <a class="button" href="#">Доставка</a>
-            </li>
-            <li class="services-button-item">
-              <a class="button" href="#">Гарантия</a>
-            </li>
-            <li class="services-button-item">
-              <a class="button" href="#">Кредит</a>
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <a class="button services-button-current" href="#">Доставка</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button" href="#">Гарантия</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button" href="#">Кредит</a>
+                </li>
+              </ul>
+              <div class="services-description-container">
+                <h3 class="services-title">Доставка</h3>
+                <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
+            <img class="services-image" src="images/services-delivery.svg" width="136" height="165" alt="Доставка">
             </li>
           </ul>
         </div>
@@ -185,13 +177,14 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
             <li class="advantages-item">
-              <a class="advantages-link" href="#"><img class="advantages-image" src="images/advantages-delivery.svg" width="47" height="31" alt="Иконка доставки">
-                Доставим редкий товар под заказ
+              <a class="advantages-link" href="#">
+                <div class="advantages-icon"></div>
+                <p class="advantages-text">Доставим редкий товар под заказ</p>
               </a>
             </li>
           </ul>
         </section>
-        <div class="about-contacts-container">
+        <div class="index-columns">
           <!--Секция "О нас"-->
           <section class="about">
             <h2 class="about-title">О нас</h2>
@@ -225,14 +218,18 @@
       <!--Секция "Рассылка"-->
       <section class="newsletter">
         <div class="page-container">
-          <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-          <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="e-mail">Ваш e-mail</label>
-            <input class="newsletter-input" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
-            <button class="newsletter-subscribe" type="submit">Подписаться</button>
-          </form>
-          <p class="newsletter-text">Это бесплатно</p>
+          <div class="newsletter-container">
+            <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+            <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
+          <div class="newsletter-container">
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="e-mail">Ваш e-mail</label>
+              <input class="newsletter-input" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+              <button class="newsletter-subscribe" type="submit">Подписаться</button>
+            </form>
+            <p class="newsletter-text-fiture">Это бесплатно</p>
+          </div>
         </div>
       </section>
     </main>
@@ -279,17 +276,17 @@
             <ul class="footer-social-list">
               <li class="footer-social-item">
                 <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
-                  <span class="visually-hidden">Фейсбук</span>
+                  <span class="">Фейсбук</span>
                 </a>
               </li>
               <li class="footer-social-item">
                 <a class="footer-social-link" href="https://www.instagram.com/htmlacademy/">
-                  <span class="visually-hidden">Инстаграм</span>
+                  <span class="">Инстаграм</span>
                 </a>
               </li>
               <li class="footer-social-item">
                 <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
-                  <span class="visually-hidden">Твиттер</span>
+                  <span class="">Твиттер</span>
                 </a>
               </li>
             </ul>

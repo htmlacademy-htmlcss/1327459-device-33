@@ -178,8 +178,11 @@ body {
 }
 
 .button {
+  display: inline-block;
+  height: 40px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
+  line-height: 40px;
   letter-spacing: 0.2em;
   color: inherit;
   background-color: #FFE17F;
@@ -190,6 +193,7 @@ body {
 
 .categories-list {
   margin: 0;
+  margin-top: 70px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -218,6 +222,7 @@ body {
 
 .services {
   background-color: #F0F0F0;
+  margin-top: 172px;
 }
 
 .services-list {
@@ -227,14 +232,20 @@ body {
 }
 
 .services-item {
+  display: flex;
   margin: 0;
 }
 
 .services-title {
   margin: 0;
+  margin-top: -22px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+}
+
+.services-image {
+  display: block;
 }
 
 .services-description {
@@ -242,9 +253,16 @@ body {
 }
 
 .services-button-list {
+  width: 287px;
   margin: 0;
+  margin-top: -40px;
   padding: 0;
   list-style: none;
+}
+
+.services-button-current {
+  color: #FFE17F;
+  background-color: black;
 }
 
 .advantages-list {
@@ -254,34 +272,46 @@ body {
 }
 
 .advantages-item {
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
   width: 1160px;
   height: 100px;
   background-color: #F0F0F0;
-  text-align: center;
 }
 
 .advantages-link {
+  display: flex;
+  height: 100px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2em;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
 }
 
-.advantages-image {
-  vertical-align: middle;
+.advantages-icon {
+  width: 125px;
+  background-color: #FFE17F;
 }
 
-.about-contacts-container{
+.advantages-text {
+  margin: 0;
+  padding: 0;
+  width: 1035px;
+  text-align: center;
+}
+
+.index-columns {
+  margin-top: 70px;
   display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 .about {
-  width: 465px;
+  width: 500px;
 }
 
 .about-title {
@@ -307,10 +337,11 @@ body {
 }
 
 .contacts {
-  width: 523px;
+  width: 533px;
 }
 
 .contacts-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -336,12 +367,26 @@ body {
   color: #444444;
 }
 
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletter-container:last-child {
+  margin-top: 144px;
+  padding-bottom: 56px;
+}
+
 .newsletter {
+  margin-top: 70px;
   background-color: #F0F0F0;
 }
 
 .newsletter-title {
   margin: 0;
+  margin-top: 64px;
+  padding: 0;
+  width: 400px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -349,7 +394,19 @@ body {
 
 .newsletter-text {
   margin: 0;
+  margin-top: 74px;
+  padding: 0;
+  width: 553px;
   color: #444444;
+}
+
+.newsletter-text-fiture {
+  margin: 0;
+  color: #444444;
+}
+
+.newsletter-form {
+  width: 811px;
 }
 
 .newsletter-subscribe {
@@ -364,6 +421,7 @@ body {
 .page-footer {
   background-color: #444444;
   color: #FFFFFF;
+  padding-top: 62px;
 }
 
 .page-footer-container {
@@ -422,6 +480,11 @@ body {
 
 .footer-social-item {
   min-width: 40px;
+}
+
+.footer-social-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .footer-contacts-phone {
