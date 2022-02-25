@@ -202,6 +202,7 @@ body {
 
 .categories-item {
   width: 160px;
+  min-height: 253px;
 }
 
 .categories-item-image {
@@ -209,8 +210,13 @@ body {
   background-color: #FFE17F;
 }
 
-.categories-item-link {
+.categories-item-name {
   display: block;
+}
+
+.categories-item-link {
+  display: flex;
+  flex-direction: column;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -282,6 +288,7 @@ body {
 
 .advantages-link {
   display: flex;
+  align-items: center;
   height: 100px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -294,6 +301,7 @@ body {
 
 .advantages-icon {
   width: 125px;
+  height: 100px;
   background-color: #FFE17F;
 }
 
@@ -320,14 +328,27 @@ body {
 }
 
 .about-text {
+  margin: 0;
+  margin-top: 48px;
   color: #444444;
 }
 
+.delivery-companies-list {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 .delivery-companies-item {
+  margin-bottom: 19px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #FFC700;
+}
+
+.delivery-companies-item:last-child {
+  margin-bottom: 0;
 }
 
 .delivery-companies {
@@ -346,19 +367,36 @@ body {
 }
 
 .contacts-text {
+  margin: 0;
+  margin-top: 48px;
   color: #444444;
 }
 
 .contacts-subtitle {
+  margin: 0;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 24px;
   color: #444444;
 }
 
-.contacts-address-text, .contacts-phone {
-
+.contacts-address-text {
+  margin: 0;
+  margin-top: 15px;
   color: #444444;
   font-style: normal;
+}
+
+.contacts-phone {
+  margin: 0;
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts-schedule {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .contacts-schedule-item {
