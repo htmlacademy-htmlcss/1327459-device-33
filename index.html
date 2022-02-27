@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/outlines.css">
+    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -67,49 +67,59 @@
               <div class="slider-number-container">
                 <span class="slider-number">01</span>
               </div>
-              <!--Див "Слайдер"-->
-              <div class="slider">
-                <h3 class="visually-hidden">Фотогалерея</h3>
-                <a class="slider-button slider-prev" href="#">
-                  <span class="">Предыдущее фото</span>
-                </a>
-                <a class="slider-image-link" href="#">
-                  <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото товара">
-                </a>
-                <a class="slider-button slider-next" href="#">
-                  <span class="">Следующее фото</span>
-                </a>
-              </div>
-              <!--Див "Пагинация для слайдера"-->
-              <div class="slider-pagination">
-                <ol class="slider-pagination-list">
-                  <li class="slider-pagination-item">
-                    <a class="slider-pagination-button slider-pagination-button-current">
-                      <span class="">1 фото</span>
-                    </a>
-                  </li>
-                  <li class="slider-pagination-item">
-                    <a class="slider-pagination-button" href="#">
-                      <span class="">2 фото</span>
-                    </a>
-                  </li>
-                  <li class="slider-pagination-item">
-                    <a class="slider-pagination-button" href="#">
-                      <span class="">3 фото</span>
-                    </a>
-                  </li>
-                </ol>
-              </div>
-              <!--Див "Описание товара"-->
-              <div class="bestsellers-card">
-                <h3 class="visually-hidden">Описание товара</h3>
-                <h4 class="bestsellers-title">Порхает как бабочка,<br> жалит как пчела!</h4>
-                <p class="bestsellers-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <p class="property">Дальность полета</p>
-                <P class="property-value">800 м</P>
-                <p class="property">Радиус поражения</p>
-                <P class="property-value">50 м</P>
-                <a class="button" href="#">Подробнее</a>
+              <div class="slider-container-1">
+                <!--Див "Слайдер"-->
+                <div class="slider">
+                  <h3 class="visually-hidden">Фотогалерея</h3>
+                  <a class="slider-button slider-prev" href="#">
+                    <span class="">Предыдущее фото</span>
+                  </a>
+                  <a class="slider-image-link" href="#">
+                    <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото товара">
+                  </a>
+                  <a class="slider-button slider-next" href="#">
+                    <span class="">Следующее фото</span>
+                  </a>
+                </div>
+                <!--Див "Описание товара"-->
+                <div class="bestsellers-card">
+                  <h3 class="visually-hidden">Описание товара</h3>
+                  <h4 class="bestsellers-title">Порхает как бабочка,<br> жалит как пчела!</h4>
+                  <p class="bestsellers-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <div class="slider-container-2">
+                    <a class="button" href="#">Подробнее</a>
+                    <!--Див "Пагинация для слайдера"-->
+                    <div class="slider-pagination">
+                      <ol class="slider-pagination-list">
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button slider-pagination-button-current">
+                            <span class="">1 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="">2 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="">3 фото</span>
+                          </a>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="bestsellers-properties-container">
+                    <div class="bestsellers-property">
+                      <p class="property-text">Дальность полета</p>
+                      <P class="property-value">800 м</P>
+                    </div>
+                    <div class="bestsellers-property">
+                      <p class="property-text">Радиус поражения</p>
+                      <P class="property-value">50 м</P>
+                    </div>
+                  </div>
+                </div>
               </div>
             </li>
           </ol>
@@ -120,40 +130,53 @@
           <ul class="categories-list">
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
+                </div>
                 <span class="categories-item-name">Виртуальная реальность</span>
               </a>
             </li>
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
-                <span class="categories-item-name">Виртуальная реальность</span>
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-monopods.svg" width="87" height="117" alt="Моноподы для селфи">
+                </div>
+                <span class="categories-item-name">Моноподы для селфи</span>
               </a>
             </li>
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
-                <span class="categories-item-name">Виртуальная реальность</span>
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-cameras.svg" width="72" height="87" alt="Экшн-камеры">
+                </div>
+                <span class="categories-item-name">Экшн-камеры</span>
               </a>
             </li>
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
-                <span class="categories-item-name">Виртуальная реальность</span>
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-bracelets.svg" width="108" height="66" alt="Фитнес-браслеты">
+                </div>
+                <span class="categories-item-name">Фитнес-браслеты</span>
               </a>
             </li>
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
-                <span class="categories-item-name">Виртуальная реальность</span>
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-watch.svg" width="57" height="98" alt="Умные часы">
+                </div>
+                <span class="categories-item-name">Умные часы</span>
               </a>
             </li>
             <li class="categories-item">
               <a class="categories-item-link" href="#">
-                <img class="categories-item-image" src="images/categories-vr.svg" width="97" height="55" alt="Виртуальная реальность">
-                <span class="categories-item-name">Виртуальная реальность</span>
+                <div class="categories-item-block">
+                  <img class="categories-item-image" src="images/categories-drones.svg" width="133" height="70" alt="Квадрокоптеры">
+                </div>
+                <span class="categories-item-name">Квадрокоптеры</span>
               </a>
             </li>
+
           </ul>
         </section>
       </div>
