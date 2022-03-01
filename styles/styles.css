@@ -30,7 +30,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -38,16 +46,96 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Центровщик */
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/* Для реализации "sticky-footer" */
+.main-container {
+  flex-grow: 1;
+}
+
 .page-header {
+  min-height: 186px;
+  width: 1160px;
+  margin: 40px auto 0;
+  padding: 0;
   background-color: #FFE17F;
 }
 
+.logo {
+  display: block;
+  margin: -23px 0 0 60px;
+}
+
+/* Обертка "поиск + навигация пользователя" */
+.navigation-user-container {
+  width: 1040px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+}
+
+.search-form {
+  width: 517px;
+}
+
+.navigation-user {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/* Основная навигация */
+.navigation-list {
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.navigation-item {
+  margin-right: 45px;
+}
+
+.navigation-item:first-child {
+  width: 293px;
+  margin-right: auto;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
+}
+
 .navigation-user-link {
+  display: block;
+  padding: 5px;
   color: inherit;
   text-decoration: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 5px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -58,28 +146,89 @@ body {
   text-decoration: none;
 }
 
+.slider-container-1 {
+  display: flex;
+}
+
+.slider-container-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 51px;
+}
+
+.slider-number-container {
+  background-color: #FFE17F;
+}
+
+.slider-number {
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 135px;
+  color: #ffffff;
+}
+
+.slider-pagination-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.bestsellers-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .bestsellers-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .bestsellers-description {
+  margin: 0;
+  margin-top: 29px;
   color: #444444;
 }
 
-.property {
+.bestsellers-properties-container {
+  display: flex;
+  margin-top: 49px;
+}
+
+.bestsellers-property {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.bestsellers-property:first-child {
+  margin-left: 0;
+}
+
+.property-text {
+  margin: 0;
+  margin-top: 12px;
   font-size: 16px;
   color: #444444;
 }
 
 .property-value {
+  order: -1;
+  margin: 0;
   font-size: 36px;
 }
 
 .button {
+  display: inline-block;
+  height: 40px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
+  line-height: 40px;
   letter-spacing: 0.2em;
   color: inherit;
   background-color: #FFE17F;
@@ -88,121 +237,276 @@ body {
   text-decoration: none;
 }
 
+.categories-list {
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.categories-item {
+  margin-right: 40px;
+  margin-bottom: 5px;
+  width: 160px;
+  min-height: 253px;
+}
+
+.categories-item:nth-child(6n) {
+  margin-right: 0;
+}
+
+.categories-item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.categories-item-block {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background-color: #FFE17F;
+}
+
+.categories-item-name {
+  display: block;
+  margin-top: 33px;
+}
+
 .categories-item-link {
+  display: flex;
+  min-height: 253px;
+  flex-direction: column;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
   color: inherit;
-  text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
-}
-
-.categories-item-image {
-  background-color: #FFE17F;
-  vertical-align: middle;
 }
 
 .services {
   background-color: #F0F0F0;
+  margin-top: 167px;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-item {
+  display: flex;
+  margin: 0;
 }
 
 .services-title {
+  margin: 0;
+  margin-top: -22px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+}
+
+.services-image {
+  display: block;
 }
 
 .services-description {
   color: #444444;
 }
 
+.services-button-list {
+  width: 287px;
+  margin: 0;
+  margin-top: -40px;
+  padding: 0;
+  list-style: none;
+}
+
+.services-button-current {
+  color: #FFE17F;
+  background-color: black;
+}
+
 .advantages-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .advantages-item {
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
   width: 1160px;
   height: 100px;
   background-color: #F0F0F0;
-  text-align: center;
 }
 
 .advantages-link {
+  display: flex;
+  align-items: center;
+  height: 100px;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.2em;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
 }
 
-.advantages-image {
-  vertical-align: middle;
+.advantages-icon {
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+}
+
+.advantages-text {
+  width: 1035px;
+  text-align: center;
+}
+
+.index-columns {
+  margin-top: 70px;
+  display: flex;
+	justify-content: space-between;
+}
+
+.about {
+  width: 500px;
 }
 
 .about-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .about-text {
+  margin: 0;
+  margin-top: 48px;
   color: #444444;
 }
 
+.delivery-companies-list {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 .delivery-companies-item {
+  margin-bottom: 19px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #FFC700;
 }
 
+.delivery-companies-item:last-child {
+  margin-bottom: 0;
+}
+
 .delivery-companies {
   color: #000000;
 }
 
+.contacts {
+  width: 533px;
+}
+
 .contacts-title {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .contacts-text {
+  margin: 0;
+  margin-top: 48px;
   color: #444444;
 }
 
 .contacts-subtitle {
+  margin: 0;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 24px;
   color: #444444;
 }
 
-.contacts-address-text, .contacts-phone {
-
+.contacts-address-text {
+  margin: 0;
+  margin-top: 15px;
   color: #444444;
   font-style: normal;
+}
+
+.contacts-phone {
+  margin: 0;
+  color: #444444;
+  font-style: normal;
+}
+
+.contacts-schedule {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .contacts-schedule-item {
   color: #444444;
 }
 
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsletter-container:last-child {
+  margin-top: 144px;
+  padding-bottom: 56px;
+}
+
 .newsletter {
+  margin-top: 70px;
   background-color: #F0F0F0;
 }
 
 .newsletter-title {
+  margin: 0;
+  margin-top: 64px;
+  padding: 0;
+  width: 400px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .newsletter-text {
+  margin: 0;
+  margin-top: 74px;
+  padding: 0;
+  width: 553px;
   color: #444444;
+}
+
+.newsletter-text-fiture {
+  margin: 0;
+  color: #444444;
+}
+
+.newsletter-form {
+  width: 811px;
 }
 
 .newsletter-subscribe {
@@ -217,11 +521,45 @@ body {
 .page-footer {
   background-color: #444444;
   color: #FFFFFF;
+  padding-top: 62px;
+}
+
+.page-footer-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-group-1-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-group-2-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contacts-address {
+  width: 239px;
 }
 
 .footer-contacts-address-text {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer-services-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-services-item {
+  margin-right: 35px;
+}
+
+.footer-services-item:last-child {
+  margin-right: 0;
 }
 
 .footer-services-link {
@@ -234,30 +572,70 @@ body {
   text-transform: uppercase;
 }
 
+.footer-social-list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-social-item {
+  min-width: 40px;
+}
+
+.footer-social-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contacts-phone {
+  width: 175px;
+}
+
 .footer-contacts-phone-number {
   font-size: 16px;
   line-height: 20px;
   color: inherit;
 }
 
+.inner-header {
+  box-sizing: border-box;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 35px 60px;
+}
+
 .categories-current {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  margin-left: 36px;
+}
+
+.breadcrumbs-item:first-child {
+  margin-left: 0;
 }
 
 .breadcrumbs-link {
+  display: block;
   font-size: 16px;
   line-height: 19px;
   color: inherit;
   text-decoration: none;
 }
 
-.catalog-filter-container {
-  background-color: #F0F0F0;
-}
-
-.sorting-container {
+.catalog-products {
   background-color: #F0F0F0;
 }
 
@@ -267,6 +645,7 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-filter-legend {
@@ -301,6 +680,13 @@ body {
 }
 
 .product-list-button {
+  display: block;
+  box-sizing: border-box;
+  width: 760px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #FFFFFF;
+  border: 3px solid #F0F0F0;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -312,7 +698,13 @@ body {
 }
 
 .pagination {
-  background-color: #EBEBEB;
+  background-color: #F0F0F0;
+  margin: 0 auto;
+  padding: 0;
+  width: 760px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 .pagination-link {
