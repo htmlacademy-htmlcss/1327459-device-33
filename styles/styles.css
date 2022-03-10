@@ -91,7 +91,19 @@ body {
 }
 
 .search-form {
+  box-sizing: border-box;
   width: 517px;
+  margin-right: 26px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.search-input {
+
+}
+
+.search-button {
+  padding: 0;
 }
 
 .navigation-user {
@@ -639,6 +651,45 @@ body {
   background-color: #F0F0F0;
 }
 
+.catalog-grid-layout {
+  display: grid;
+  grid-template-columns: 320px 840px;
+  grid-template-rows: 70px auto;
+  grid-template-areas:
+    "filter sorting"
+    "filter products";
+}
+
+.product-list {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  row-gap: 44px;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-list-container {
+  background-color: #FFFFFF;
+}
+
+
+.product-card-title {
+  margin: 0;
+  padding: 0;
+}
+
+.sorting-container {
+  grid-area: sorting;
+  display: flex;
+}
+
+.catalog-filter-container {
+  grid-area: filter;
+}
+
 .catalog-filter-title, .catalog-sorting-title {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -682,6 +733,7 @@ body {
 .product-list-button {
   display: block;
   box-sizing: border-box;
+  border: 3px solid #EBEBEB;
   width: 760px;
   margin: 0 auto;
   padding: 15px;
