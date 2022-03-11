@@ -95,11 +95,31 @@ body {
   width: 517px;
   margin-right: 26px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 160px;
+}
+
+.search-input {
+  box-sizing: border-box;
+  padding-left: 46px;
+  background-color: transparent;
+  outline: none;
+  border: transparent;
+  border: 2px solid black;
+  font: inherit;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: none;
 }
 
 .search-button {
+  box-sizing: border-box;
   padding: 0;
+  border: 2px solid black;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .navigation-user {
@@ -192,6 +212,7 @@ body {
 
 .bestsellers-title {
   margin: 0;
+  margin-top: -22px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -296,6 +317,10 @@ body {
   letter-spacing: -0.02em;
   color: inherit;
   text-decoration: none;
+}
+
+.categories-item-link:hover .categories-item-block{
+  background-color: #FFC700;
 }
 
 .services {
@@ -586,13 +611,24 @@ body {
   padding: 0;
 }
 
-.footer-social-item {
-  min-width: 40px;
+.footer-social-item:not(:last-child) {
+  margin-right: 15px;;
 }
 
 .footer-social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.3;
   color: inherit;
   text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background-color: #FFC700;
+  opacity: 1;
 }
 
 .footer-contacts-phone {
