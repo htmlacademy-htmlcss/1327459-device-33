@@ -76,9 +76,22 @@ body {
   background-color: #FFE17F;
 }
 
+.header-index-link {
+  display: inline-block;
+  margin: -23px 0 0 60px;
+  color: #000000;
+}
+
+.header-index-link:hover .logo {
+  opacity: 0.6;
+}
+
+.header-index-link:active .logo {
+  opacity: 0.3;
+}
+
 .logo {
   display: block;
-  margin: -23px 0 0 60px;
 }
 
 /* Обертка "поиск + навигация пользователя" */
@@ -155,6 +168,42 @@ body {
 
 .navigation-item:last-child {
   margin-right: 0;
+}
+
+.navigation-user-item:nth-child(1) .navigation-user-link::before {
+  content: "";
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/header/login-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-item:nth-child(3) .navigation-user-link::before {
+  content: "";
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/header/compare-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-user-item:nth-child(4) .navigation-user-link::before {
+  content: "";
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+  width: 33px;
+  height: 16px;
+  background-image: url("../images/header/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation-user-link {
@@ -326,6 +375,14 @@ body {
   background-color: #FFC700;
 }
 
+.categories-item-link:active .categories-item-block{
+  background-color: #FFE17F;
+}
+
+.categories-item-link:active {
+  opacity: 0.3;
+}
+
 .services {
   background-color: #F0F0F0;
   margin-top: 167px;
@@ -399,7 +456,22 @@ body {
   color: inherit;
 }
 
-.advantages-icon {
+.advantages-link:hover .advantages-block {
+  background-color: #FFC700;
+}
+
+.advantages-link:active .advantages-block {
+  background-color: #FFE17F;
+}
+
+.advantages-link:active {
+  opacity: 0.3;
+}
+
+.advantages-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 125px;
   height: 100px;
   background-color: #FFE17F;
@@ -539,6 +611,18 @@ body {
 .newsletter-text-fiture {
   margin: 0;
   color: #444444;
+}
+
+.newsletter-text-fiture::before {
+  content: "";
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/tick-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .newsletter-form {
