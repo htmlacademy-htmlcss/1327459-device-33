@@ -575,6 +575,18 @@ body {
   justify-content: space-between;
 }
 
+.footer-index-link {
+  color: #FFC700;
+}
+
+.footer-index-link:hover {
+  opacity: 0.6;
+}
+
+.footer-index-link:active {
+  opacity: 0.3;
+}
+
 .footer-contacts-address {
   width: 239px;
 }
@@ -648,9 +660,17 @@ body {
   text-decoration: none;
 }
 
+.footer-social-icon {
+  color: #444444;
+}
+
 .footer-social-link:hover {
   background-color: #FFC700;
   opacity: 1;
+}
+
+.footer-social-link:active .footer-social-icon{
+  opacity: 0.3;
 }
 
 .footer-contacts-phone {
