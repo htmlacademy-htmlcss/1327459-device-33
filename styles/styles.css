@@ -448,6 +448,9 @@ body {
 .services-item {
   display: flex;
   margin: 0;
+  margin-bottom: 70px;
+  padding-bottom: 72px;
+  padding-right: 140px;
 }
 
 .services-title {
@@ -460,18 +463,33 @@ body {
 
 .services-image {
   display: block;
+  margin-top: -22px;
 }
 
 .services-description {
   color: #444444;
+  width: 400px;
 }
 
 .services-button-list {
-  width: 287px;
+  position: relative;
+  width: 280px;
   margin: 0;
   margin-top: -40px;
+  margin-right: 116px;
   padding: 0;
   list-style: none;
+}
+
+.services-button-list::before {
+  display: block;
+  position: absolute;
+  top: -64px;
+  left: 280px;
+  content: "";
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
 }
 
 .services-button-current {
@@ -487,7 +505,6 @@ body {
 
 .advantages-item {
   margin: 0;
-  margin-top: 70px;
   padding: 0;
   width: 1160px;
   height: 100px;
@@ -617,7 +634,9 @@ body {
 }
 
 .contacts-schedule {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
   margin-top: 15px;
   margin-bottom: 40px;
 }
