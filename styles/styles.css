@@ -266,6 +266,21 @@ body {
   opacity: 0.3;
 }
 
+/* Всплывающее меню с каталогом */
+.catalog-elements-link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.catalog-elements-link {
+  display: block;
+  color: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+}
+/* */
+
 .slider {
   margin-top: -150px;
   position: relative;
@@ -577,10 +592,42 @@ body {
 
 .services-button {
   padding: 0;
+  width: 160px;
+}
+
+.services-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: auto;
+  height: 8px;
+  background-color: #FFE17F;
 }
 
 .services-button-current {
   color: #FFE17F;
+  background-color: #000000;
+}
+
+.services-button-current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 40px;
+  width: 280px;
+  background-color: #000000;
+
+}
+
+.services-button-current:hover {
   background-color: black;
 }
 
@@ -651,7 +698,7 @@ body {
 }
 
 .index-columns {
-  margin-top: 70px;
+  margin-top: 117px;
   display: flex;
 	justify-content: space-between;
 }
@@ -661,10 +708,21 @@ body {
 }
 
 .about-title {
+  position: relative;
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+}
+
+.about-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -47px;
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
 }
 
 .about-text {
@@ -700,10 +758,21 @@ body {
 }
 
 .contacts-title {
+  position: relative;
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+}
+
+.contacts-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -47px;
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
 }
 
 .contacts-text {
