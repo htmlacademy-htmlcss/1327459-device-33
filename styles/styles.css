@@ -221,8 +221,23 @@ body {
 }
 
 .navigation-item:first-child {
-  width: 293px;
   margin-right: auto;
+}
+
+.navigation-item:first-child .navigation-link::after{
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/header/catalog-toggler.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation-item:last-child {
@@ -230,6 +245,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 5px;
   font-family: "Raleway", sans-serif;
@@ -275,6 +291,14 @@ body {
   top: 211px;
   right: 30px;
   transform: scale(-1);
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
 }
 
 .slider-image {
@@ -503,7 +527,6 @@ body {
   margin: 0;
   margin-bottom: 70px;
   padding-bottom: 72px;
-  padding-right: 140px;
 }
 
 .services-title {
@@ -514,14 +537,21 @@ body {
   line-height: 50px;
 }
 
+.services-description {
+  color: #444444;
+  margin: 0;
+  margin-top: 34px;
+  margin-bottom: 20px;
+}
+
+.services-description-container {
+  width: 485px;
+  margin-right: 73px;
+}
+
 .services-image {
   display: block;
   margin-top: -22px;
-}
-
-.services-description {
-  color: #444444;
-  width: 400px;
 }
 
 .services-button-list {
@@ -543,6 +573,10 @@ body {
   width: 7px;
   height: 319px;
   background-color: #000000;
+}
+
+.services-button {
+  padding: 0;
 }
 
 .services-button-current {
@@ -577,6 +611,17 @@ body {
   color: inherit;
 }
 
+.advantages-attention-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 43px;
+}
+
+.advantages-link:hover .advantages-attention-icon g {
+  opacity: 1;
+}
+
 .advantages-link:hover .advantages-block {
   background-color: #FFC700;
 }
@@ -599,8 +644,10 @@ body {
 }
 
 .advantages-text {
-  width: 1035px;
   text-align: center;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .index-columns {
