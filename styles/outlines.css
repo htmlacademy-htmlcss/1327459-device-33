@@ -57,3 +57,7 @@ p {
 h1, h2, h3, h4 {
   outline: 2px dashed #230e9c;
 }
+
+svg {
+  outline: 2px solid black;
+}
