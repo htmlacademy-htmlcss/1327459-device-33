@@ -228,6 +228,7 @@ body {
 .navigation-item:first-child .navigation-link::after{
   display: block;
   position: absolute;
+  z-index: 2;
   top: 0;
   bottom: 0;
   right: -60px;
@@ -269,13 +270,27 @@ body {
 
 /* Всплывающее меню с каталогом */
 .catalog-elements {
+  display: none;
   position: absolute;
+  box-sizing: border-box;
+  left: -60px;
+  width: 1160px;
   padding-top: 30px;
   padding-bottom: 27px;
+  padding-left: 60px;
+  padding-right: 60px;
+  z-index: 1;
+  background-color: #FFE17F;
+}
+
+.navigation-item:first-child .navigation-link:hover + .catalog-elements {
+  display: block;
 }
 
 .catalog-elements-link-list {
   display: grid;
+  column-gap: 10px;
+  row-gap: 5px;
   grid-template-columns: 220px 220px 220px;
   grid-template-rows: 20px 20px 20px;
   list-style-type: none;
@@ -303,6 +318,14 @@ body {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
+}
+
+.catalog-elements-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-elements-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 /* */
 
@@ -450,7 +473,6 @@ body {
   display: inline-block;
   padding-left: 40px;
   padding-right: 40px;
-  height: 40px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 40px;
@@ -477,13 +499,14 @@ body {
   width: auto;
   height: 8px;
   background-color: #FFE17F;
+  transition: 0.3s;
 }
 
-.button:hover {
-  background-color: #FFE17F;
+.button:hover.button::before{
+  transform: scaleY(5);
 }
 
-.button:active {
+.button:active.button::before {
   background-color: #FFC700;
 }
 
@@ -522,6 +545,7 @@ body {
   width: 160px;
   height: 160px;
   background-color: #FFE17F;
+  transition: 0.3s;
 }
 
 .categories-item-name {
@@ -700,6 +724,7 @@ body {
   width: 125px;
   height: 100px;
   background-color: #FFE17F;
+  transition: 0.3s;
 }
 
 .advantages-text {
@@ -912,6 +937,7 @@ body {
   padding-bottom: 18px;
   padding-right: 39px;
   padding-left: 39px;
+  transition: 0.3s;
 }
 
 .newsletter-subscribe:hover {
@@ -1254,6 +1280,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .product-list-button:hover {
