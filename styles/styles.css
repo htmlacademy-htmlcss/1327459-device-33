@@ -218,6 +218,7 @@ body {
 
 .navigation-item {
   margin-right: 45px;
+  position: relative;
 }
 
 .navigation-item:first-child {
@@ -267,9 +268,33 @@ body {
 }
 
 /* Всплывающее меню с каталогом */
+.catalog-elements {
+  position: absolute;
+  padding-top: 30px;
+  padding-bottom: 27px;
+}
+
 .catalog-elements-link-list {
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 20px 20px 20px;
   list-style-type: none;
   padding: 0;
+}
+
+.catalog-elements-link-item:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.catalog-elements-link-item:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.catalog-elements-link-item:nth-child(5) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .catalog-elements-link {
@@ -435,6 +460,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  z-index: 0;
 }
 
 .button::before {
@@ -594,21 +620,6 @@ body {
 .services-button {
   padding: 0;
   width: 160px;
-}
-
-.services-button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: auto;
-  height: 8px;
-  background-color: #FFE17F;
 }
 
 .services-button-current {
@@ -1157,6 +1168,8 @@ body {
 
 .catalog-filter-container {
   grid-area: filter;
+  padding-left: 60px;
+  padding-top: 25px;
 }
 
 .catalog-filter-title, .catalog-sorting-title {
@@ -1166,6 +1179,15 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0;
+}
+
+.catalog-filter-title {
+  margin-bottom: 60px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .catalog-filter-legend {
