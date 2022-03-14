@@ -1047,11 +1047,26 @@ body {
   margin-top: 16px;
   padding: 0;
   display: flex;
-  list-style: none;
+  list-style-type: none;
 }
 
 .breadcrumbs-item {
+  position: relative;
   margin-left: 36px;
+}
+
+.breadcrumbs-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 4px;
+  height: 7px;
+  background-image: url(../images/catalog/breadcrumbs-arrow.svg);
+
 }
 
 .breadcrumbs-item:first-child {
