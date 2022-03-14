@@ -488,6 +488,7 @@ body {
   right: 0;
   bottom: 0;
   margin: auto;
+
 }
 
 .categories-item-block {
@@ -850,6 +851,7 @@ body {
 .newsletter-text-fiture {
   margin: 0;
   color: #444444;
+  align-self: center;
 }
 
 .newsletter-text-fiture::before {
@@ -865,7 +867,23 @@ body {
 }
 
 .newsletter-form {
-  width: 811px;
+  width: 810px;
+  display: flex;
+}
+
+.newsletter-input {
+  display: block;
+  outline: none;
+  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  border: 3px solid #CECECE;
+  border-right: none;
+  border-top: none;
+  border-left: none;
 }
 
 .newsletter-subscribe {
@@ -875,6 +893,25 @@ body {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 3px solid #CECECE;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 39px;
+  padding-left: 39px;
+}
+
+.newsletter-subscribe:hover {
+  border-color: #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.newsletter-subscribe:active {
+  border-color: #CECECE;
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .page-footer {
@@ -1198,8 +1235,10 @@ body {
 
 .product-list-button:hover {
   border: 3px solid #000000;
-  background-color: #000000;
-  color: #FFFFFF;
+}
+
+.product-list-button:active {
+  opacity: 0.3;
 }
 
 .pagination {
@@ -1212,15 +1251,49 @@ body {
   display: flex;
   /* justify-content: space-between; */
   list-style-type: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .pagination-link {
   line-height: 21px;
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
   padding: 25px;
   display: block;
   text-decoration: none;
+}
+
+.pagination-link:hover {
+  color: rgba(68, 68, 68, 1);
+}
+
+.pagination-link:active {
+  color: rgba(68, 68, 68, 0.1);
+}
+
+.pagination-link.pagination-current:hover {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.pagination-link.pagination-current:active {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+/* Кнопки "Назад" и "Вперед" */
+.pagination-link.pagination-next:hover, .pagination-link.pagination-prev:hover {
+  color: #000000;
+  background-color: #DCDCDC;
+}
+
+.pagination-link.pagination-next:active, .pagination-link.pagination-prev:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-link.pagination-next.pagination-disabled:hover, .pagination-link.pagination-prev.pagination-disabled:hover {
+  background-color: #F0F0F0;
+}
+
+.pagination-link.pagination-next.pagination-disabled:active, .pagination-link.pagination-prev.pagination-disabled:active {
+  color: #000000;
 }
 
 .pagination-prev, .pagination-next {
@@ -1232,6 +1305,7 @@ body {
   opacity: 1;
   text-transform: uppercase;
 }
+/*  */
 
 .prev {
   margin-right: auto;
