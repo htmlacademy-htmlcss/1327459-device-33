@@ -646,6 +646,10 @@ body {
   text-decoration: none;
 }
 
+.categories-item-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .categories-item-link:hover .categories-item-block {
   background-color: #FFC700;
 }
@@ -656,6 +660,7 @@ body {
 
 .categories-item-link:active {
   opacity: 0.3;
+  outline: none;
 }
 
 .services {
@@ -782,6 +787,10 @@ body {
   margin-right: 43px;
 }
 
+.advantages-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .advantages-link:hover .advantages-attention-icon g {
   opacity: 1;
 }
@@ -796,6 +805,7 @@ body {
 
 .advantages-link:active {
   opacity: 0.3;
+  outline: none;
 }
 
 .advantages-block {
@@ -918,6 +928,20 @@ body {
   margin: 0;
   color: #444444;
   font-style: normal;
+  padding: 5px;
+}
+
+.contacts-phone:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.contacts-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-phone:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .contacts-schedule {
@@ -1023,6 +1047,12 @@ body {
   padding-right: 39px;
   padding-left: 39px;
   transition: 0.3s;
+  outline: none;
+  outline-offset: 0;
+}
+
+.newsletter-subscribe:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .newsletter-subscribe:hover {
@@ -1033,7 +1063,8 @@ body {
 
 .newsletter-subscribe:active {
   border-color: #CECECE;
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .page-footer {
