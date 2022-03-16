@@ -1375,6 +1375,7 @@ body {
   grid-area: filter;
   padding-left: 60px;
   padding-top: 25px;
+  padding-right: 60px;
 }
 
 .catalog-filter-title, .catalog-sorting-title {
@@ -1384,7 +1385,10 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0;
-  margin-right: 197px;;
+}
+
+.catalog-sorting-title {
+  margin-right: 197px;
 }
 
 .catalog-filter-title {
@@ -1394,19 +1398,27 @@ body {
 .catalog-filter-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 17px;
 }
 
 .catalog-filter-legend {
+  width: 100%;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
   padding: 0;
+  padding-top: 20px;
   margin: 0;
+  margin-bottom: 20px;
+  border-top: 2px solid #000000;
 }
 
 .catalog-filter-group {
   border: none;
-  border-top: 2px solid #000000;
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
@@ -1416,7 +1428,8 @@ body {
   position: relative;
   background-color: #DCDCDC;
   height: 2px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 33px;
 }
 
 .range-bar {
@@ -1517,6 +1530,10 @@ body {
   height: 20px;
   border: 2px solid #CCCCCC;
   border-radius: 3px;
+}
+
+.control-label {
+  display: block;
 }
 
 .control:hover {
