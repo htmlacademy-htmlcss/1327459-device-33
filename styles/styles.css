@@ -1365,8 +1365,10 @@ body {
   padding-left: 40px;
   padding-top: 26px;
   padding-bottom: 26px;
+  padding-right: 20px;
   grid-area: sorting;
   display: flex;
+  align-items: center;
 }
 
 .catalog-filter-container {
@@ -1382,6 +1384,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0;
+  margin-right: 197px;;
 }
 
 .catalog-filter-title {
@@ -1560,18 +1563,92 @@ body {
   background-color: #000000;
   border-radius: 50%;
 }
-/*  */
 
 .control-input {
   font-size: 16px;
   line-height: 19px;
+}
+/*  */
+
+/* Сортировка */
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 159px;
 }
 
 .select-control {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
+  font: inherit;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  width: 100%;
+  border: none;
+  background-image: url(../images/catalog/select-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  cursor: pointer;
 }
+
+.select-control:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.select-control:hover {
+  opacity: 0.6;
+}
+
+.select-control:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.sorting-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sorting-arrow-icon {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.sorting-button.low .sorting-arrow-icon {
+  transform: scaleY(-1);
+}
+
+.sorting-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.sorting-button:hover .sorting-arrow-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.sorting-button:active .sorting-arrow-icon {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sorting-button:active {
+  outline: none;
+}
+
+
+
+
+
+/*  */
 
 .product-card-link {
 	position: relative;

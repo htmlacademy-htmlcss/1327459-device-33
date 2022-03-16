@@ -171,16 +171,20 @@
           <!--Сортировка-->
           <div class="sorting-container">
             <h3 class="catalog-sorting-title">Сортировка:</h3>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular" selected>Популярные</option>
-              <option value="new">Новинки</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="cheap">Сначала дешевые</option>
-            </select>
-            <a class="sorting-button" href="#">
+            <div class="select">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular" selected>Популярные</option>
+                <option value="new">Новинки</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="cheap">Сначала дешевые</option>
+              </select>
+            </div>
+            <a class="sorting-button heigh" href="#">
+              <svg class="sorting-arrow-icon" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="currentColor"/></svg>
               <span class="visually-hidden">Сортировать по возрастанию</span>
             </a>
-            <a class="sorting-button" href="#">
+            <a class="sorting-button low" href="#">
+              <svg class="sorting-arrow-icon" width="12" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="currentColor"/></svg>
               <span class="visually-hidden">Сортировать по убыванию</span>
             </a>
           </div>
