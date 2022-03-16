@@ -122,7 +122,7 @@ body {
   background-color: transparent;
   outline: none;
   border: 2px solid black;
-  font-family: inherit;
+  font: inherit;
   font-size: 16px;
   line-height: 20px;
   border-top-left-radius: 50px;
@@ -371,24 +371,30 @@ body {
 
 .slider-button {
   display: block;
-  position: absolute;
   width: 20px;
   height: 60px;
   background-image: url("../images/gallery/slider-button.svg");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 10px;
+  padding: 20px;
+}
+
+.slider-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 .slider-prev {
-  top: 211px;
-  left: 30px;
+  padding-left: 30px;
 }
 
 .slider-next {
-  top: 211px;
-  right: 30px;
   transform: scale(-1);
+  padding-right: 30px;
 }
 
 .slider-button:focus {
@@ -1019,11 +1025,12 @@ body {
   flex-grow: 1;
   box-sizing: border-box;
   background-color: transparent;
-  font-family: inherit;
+  font: inherit;
   font-size: 18px;
   line-height: 30px;
   border: none;
   border-bottom: 3px solid #CECECE;
+  padding: 11px 16px 14px 16px;
 }
 
 .newsletter-input:focus {
@@ -1391,6 +1398,56 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
 }
+
+/* Стоимость */
+.range-scale {
+  position: relative;
+  background-color: #DCDCDC;
+  height: 2px;
+  margin-bottom: 11px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #EBEBEB;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  transform: translateY(-50%) translateX(-50%);
+
+}
+
+.toggle-max {
+  right: 0;
+  transform: translateY(-50%) translateX(50%);
+
+}
+
+.range-toggle:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.range-toggle:hover {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.range-toggle:active {
+  background-color: #000000;
+  outline: none;
+}
+/*  */
 
 .control-input {
   font-size: 16px;
