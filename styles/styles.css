@@ -1397,14 +1397,23 @@ body {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
+  padding: 0;
+  margin: 0;
 }
 
+.catalog-filter-group {
+  border: none;
+  border-top: 2px solid #000000;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+}
 /* Стоимость */
 .range-scale {
   position: relative;
   background-color: #DCDCDC;
   height: 2px;
-  margin-bottom: 11px;
+  margin-bottom: 40px;
 }
 
 .range-bar {
@@ -1446,6 +1455,110 @@ body {
 .range-toggle:active {
   background-color: #000000;
   outline: none;
+}
+
+.catalog-filter-label {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 10px;
+}
+
+.label-min {
+  transform: translateX(-50%);
+}
+
+.label-max {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.range-input {
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+  width: 50px;
+  color: rgba(0, 0, 0, 0.3);
+  padding: 0;
+}
+
+.range-input:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+/*  */
+
+/* Цвет */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.control-mark {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 3px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:disabled + .control-mark, .control-input:disabled ~ .control-label {
+  opacity: 0.1;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url(../images/catalog/checkbox_checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000000;
+}
+
+.control-input:focus + .control-mark {
+  outline: 2px solid #AF4FFF;
+}
+/*  */
+
+/* Bluetooth */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+  border: 2px solid #000000;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
 }
 /*  */
 
