@@ -61,3 +61,23 @@ h1, h2, h3, h4 {
 svg {
   outline: 2px solid black;
 }
+
+input {
+  outline: 2px solid black;
+}
+
+label {
+  outline: 1px solid red;
+}
+
+legend {
+  outline: 1px solid rgb(9, 0, 128);
+}
+
+select {
+  outline: 1px solid rgb(9, 0, 128);
+}
+
+fieldset {
+  outline: 3px solid #1f9c0e;
+}

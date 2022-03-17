@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
+    <link rel="stylesheet" href="styles/outlines.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
   </head>
@@ -42,7 +42,20 @@
           <!--Меню сайта-->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <a class="navigation-link" href="#">
+              Каталог товаров
+              <svg class="catalog-toggler" width="50" height="51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity=".3" cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2"/>
+                <g opacity=".3" clip-path="url(#a)">
+                  <path d="M33 24.39h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000"/>
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(17 17.39)" d="M0 0h16v16H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
             <div class="catalog-elements">
               <ul class="catalog-elements-link-list">
                 <li class="catalog-elements-link-item">
@@ -95,13 +108,15 @@
                 <!--Див "Слайдер"-->
                 <div class="slider">
                   <h3 class="visually-hidden">Фотогалерея</h3>
-                  <a class="slider-button slider-prev" href="#">
-                    <span class="visually-hidden">Предыдущее фото</span>
-                  </a>
                   <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото товара">
-                  <a class="slider-button slider-next" href="#">
-                    <span class="visually-hidden">Следующее фото</span>
-                  </a>
+                  <div class="slider-controls">
+                    <a class="slider-button slider-prev" href="#">
+                      <span class="visually-hidden">Предыдущее фото</span>
+                    </a>
+                    <a class="slider-button slider-next" href="#">
+                      <span class="visually-hidden">Следующее фото</span>
+                    </a>
+                  </div>
                 </div>
                 <!--Див "Описание товара"-->
                 <div class="bestsellers-card">
@@ -361,5 +376,34 @@
         </div>
       </div>
     </footer>
+		<div class="modal-container modal-container-close">
+			<div class="modal modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label for="user-name">Ваше имя:</label>
+              <input class="delivery-form-field field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+            </p>
+            <p class="field-group">
+              <label for="user-email">Ваш e-mail:</label>
+              <input class="delivery-form-field field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+            </p>
+            <p class="field-group">
+              <label for="delivery-package">Что нужно привезти:</label>
+              <input class="delivery-form-field field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
+            </p>
+            <p class="field-group">
+              <label for="delivery-number">Количество:</label>
+              <input class="delivery-form-field field" type="number" id="delivery-number" name="delivery-number" value="1">
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </section>
+			</div>
+		</div>
   </body>
 </html>
