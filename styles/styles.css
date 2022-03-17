@@ -270,8 +270,12 @@ body {
 }
 
 .navigation-item:first-child .navigation-link:hover .catalog-toggler{
-  display: flex;
-  align-items: center;
+  opacity: 1;
+}
+
+.navigation-item:first-child .navigation-link:focus-within .catalog-toggler clipPath {
+  transform-origin: 50% 50%;
+  transform: scaleY(0.11);
 }
 
 .navigation-link {
