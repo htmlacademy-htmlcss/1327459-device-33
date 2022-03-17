@@ -376,6 +376,7 @@
         </div>
       </div>
     </footer>
+    <!-- Модальное окно -->
 		<div class="modal-container modal-container-close">
 			<div class="modal modal-delivery">
         <button class="modal-close-button">
@@ -385,19 +386,19 @@
           <h2 class="modal-title">Доставка под заказ</h2>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
-              <label for="user-name">Ваше имя:</label>
-              <input class="delivery-form-field field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+              <label class="modal-form-label" for="user-name">Ваше имя:</label>
+              <input class="delivery-form-field user-name-field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
             </p>
             <p class="field-group">
-              <label for="user-email">Ваш e-mail:</label>
-              <input class="delivery-form-field field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+              <label class="modal-form-label" for="user-email">Ваш e-mail:</label>
+              <input class="delivery-form-field email-field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
             </p>
             <p class="field-group">
-              <label for="delivery-package">Что нужно привезти:</label>
+              <label class="modal-form-label" for="delivery-package">Что нужно привезти:</label>
               <input class="delivery-form-field field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
             </p>
             <p class="field-group">
-              <label for="delivery-number">Количество:</label>
+              <label class="modal-form-label" for="delivery-number">Количество:</label>
               <input class="delivery-form-field field" type="number" id="delivery-number" name="delivery-number" value="1">
             </p>
             <button class="button" type="submit">Отправить</button>

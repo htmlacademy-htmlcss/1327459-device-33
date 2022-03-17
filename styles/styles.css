@@ -2,7 +2,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  src: url(../fonts/raleway/raleway-800.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url(../fonts/rubik/rubik-400.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -18,7 +18,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url(../fonts/rubik/rubik-700.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -26,7 +26,7 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  src: url(../fonts/rubik/rubik-800.woff2) format("woff2");
   font-display: swap;
 }
 
@@ -128,7 +128,7 @@ body {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border-right: none;
-  background-image: url("../images/header/search-icon.svg");
+  background-image: url(../images/header/search-icon.svg);
   background-repeat: no-repeat;
   background-position: 16px center;
 }
@@ -186,7 +186,7 @@ body {
   vertical-align: middle;
   width: 16px;
   height: 16px;
-  background-image: url("../images/header/login-icon.svg");
+  background-image: url(../images/header/login-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -198,7 +198,7 @@ body {
   vertical-align: middle;
   width: 16px;
   height: 16px;
-  background-image: url("../images/header/compare-icon.svg");
+  background-image: url(../images/header/compare-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -210,7 +210,7 @@ body {
   vertical-align: middle;
   width: 33px;
   height: 16px;
-  background-image: url("../images/header/cart-icon.svg");
+  background-image: url(../images/header/cart-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -377,7 +377,7 @@ body {
   display: block;
   width: 20px;
   height: 60px;
-  background-image: url("../images/gallery/slider-button.svg");
+  background-image: url(../images/gallery/slider-button.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
@@ -1014,7 +1014,7 @@ body {
   vertical-align: middle;
   width: 16px;
   height: 16px;
-  background-image: url("../images/tick-icon.svg");
+  background-image: url(../images/tick-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1665,11 +1665,6 @@ body {
 .sorting-button:active {
   outline: none;
 }
-
-
-
-
-
 /*  */
 
 .product-card-link {
@@ -1886,6 +1881,7 @@ body {
 /* Модальное окно */
 .modal-container {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   display: flex;
@@ -1916,8 +1912,8 @@ body {
 
 .modal-close-button {
   position: absolute;
-  top: 84px;
-  right: 80px;
+  top: 74px;
+  right: 70px;
   width: 26px;
   height: 26px;
   border: none;
@@ -1933,9 +1929,76 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.delivery-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  outline: 1px solid pink;
+}
+
+.delivery-form .button {
+  margin-top: -20px;
 }
 
 .field-group {
-  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  outline: 1px dashed green;
+  margin: 0;
+  margin-bottom: 62px;
+  padding: 0;
+}
+
+.modal-form-label {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.delivery-form-field {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: #F0F0F0;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px;
+}
+
+.delivery-form .field-group:nth-child(1) {
+  width: 360px;
+}
+
+.delivery-form .field-group:nth-child(2) {
+  width: 360px;
+}
+
+.delivery-form .field-group:nth-child(3) {
+  width: 540px;
+}
+
+.delivery-form .field-group:nth-child(4) {
+  width: 180px;
+}
+
+.user-name-field::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/header/login-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.email-field:invalid {
+  border: 2px solid #FF3D3D;
 }
 /*  */
