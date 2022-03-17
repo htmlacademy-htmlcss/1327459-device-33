@@ -2028,14 +2028,28 @@ body {
   display: none;
   box-sizing: border-box;
   position: absolute;
-  left: -10px;
-  top: 30px;
+  left: -20px;
+  top: 33px;
   background-color: #000000;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
   padding: 19px;
   width: 200px;
+}
+
+.help-window::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  right: 40px;
+  background-image: url(../images/modal/help-window-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 6px;
 }
 
 .help-button {
