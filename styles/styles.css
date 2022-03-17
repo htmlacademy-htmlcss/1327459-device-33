@@ -1918,12 +1918,24 @@ body {
   width: 26px;
   height: 26px;
   border: none;
-  outline: 1px solid black;
   background-color: transparent;
   background-image: url(../images/modal/close-button.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .modal-title {
@@ -1938,7 +1950,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  outline: 1px solid pink;
 }
 
 .delivery-form .button {
@@ -1946,9 +1957,9 @@ body {
 }
 
 .field-group {
+  position: relative;
   display: flex;
   flex-direction: column;
-  outline: 1px dashed green;
   margin: 0;
   margin-bottom: 62px;
   padding: 0;
@@ -1960,6 +1971,7 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   margin-bottom: 14px;
+  width: max-content;
 }
 
 .delivery-form-field {
@@ -1972,6 +1984,18 @@ body {
   font-size: 16px;
   line-height: 20px;
   padding: 20px;
+}
+
+.delivery-form-field:hover {
+  background-color: #DCDCDC;
+}
+
+.delivery-form-field:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-form-field:disabled {
+  opacity: 0.3;
 }
 
 .delivery-form .field-group:nth-child(1) {
@@ -1990,16 +2014,117 @@ body {
   width: 180px;
 }
 
-.user-name-field::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/header/login-icon.svg);
+.notification {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.email-field + .notification {
+  visibility: hidden;
+  color: #FF3D3D;
+}
+
+.help-window {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  left: -10px;
+  top: 30px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 19px;
+  width: 200px;
+}
+
+.help-button {
+  position: absolute;
+  display: block;
+  top: -3px;
+  left: 120px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/modal/modal-help-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.help-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.help-button:focus + .help-window{
+  display: block;
+}
+
+.user-name-field {
+  background-image: url(../images/modal/modal-user-icon.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  padding-right: 55px;
+}
+
+.email-field {
+  background-image: url(../images/modal/post-icon.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  padding-right: 55px;
+}
+
 .email-field:invalid {
   border: 2px solid #FF3D3D;
+}
+
+.email-field:invalid + .notification {
+  visibility: visible;
+}
+
+.delivery-number-field {
+  text-align: center;
+  appearance: textfield;
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.delivery-number-field::-webkit-outer-spin-button,
+.delivery-number-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.delivery-number-button {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.delivery-number-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-number-button:hover {
+  background-color: #DCDCDC;
+}
+
+.delivery-number-button:active {
+  background-color: #F0F0F0;
+  outline: none;
+}
+
+.button-minus {
+  left: 0;
+  background-image: url(../images/modal/modal-number-less.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-plus {
+  right: 0;
+  background-image: url(../images/modal/modal-number-more.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*  */

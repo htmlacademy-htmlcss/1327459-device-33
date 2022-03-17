@@ -375,7 +375,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-		<div class="modal-container modal-container-close">
+		<div class="modal-container">
 			<div class="modal modal-delivery">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -386,18 +386,28 @@
             <p class="field-group">
               <label class="modal-form-label" for="user-name">Ваше имя:</label>
               <input class="delivery-form-field user-name-field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+              <span class="notification">Добавьте имя</span>
             </p>
             <p class="field-group">
               <label class="modal-form-label" for="user-email">Ваш e-mail:</label>
               <input class="delivery-form-field email-field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+              <span class="notification">Забавный у вас адрес</span>
             </p>
             <p class="field-group">
               <label class="modal-form-label" for="delivery-package">Что нужно привезти:</label>
-              <input class="delivery-form-field field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
+              <input class="delivery-form-field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
             </p>
             <p class="field-group">
               <label class="modal-form-label" for="delivery-number">Количество:</label>
-              <input class="delivery-form-field field" type="number" id="delivery-number" name="delivery-number" value="1">
+              <button class="delivery-number-button button-minus" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <button class="delivery-number-button button-plus" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+              <input class="delivery-form-field delivery-number-field" type="number" id="delivery-number" name="delivery-number" value="1">
+              <a class="help-button" href="#"></a>
+              <span class="help-window">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
             </p>
             <button class="button" type="submit">Отправить</button>
           </form>
