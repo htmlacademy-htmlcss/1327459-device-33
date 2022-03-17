@@ -152,6 +152,7 @@ body {
   cursor: pointer;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+  transition: 0.3s;
 }
 
 .search-button:focus {
@@ -262,6 +263,7 @@ body {
 .navigation-item:first-child .navigation-link {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 
 .catalog-toggler {
