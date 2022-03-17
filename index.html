@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
+    <link rel="stylesheet" href="styles/outlines.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
   </head>
@@ -36,6 +36,32 @@
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <img class="cart-item-image" src="images/popover-cart/product-1-small.jpg" width="39" height="43" alt="Любительская селфи-палка">
+                      <p class="cart-item-title">Любительская селфи-палка</p>
+                      <button class="cart-item-delete">
+                        <span class="visually-hidden">Удалить товар</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <img class="cart-item-image" src="images/popover-cart/product-2-small.jpg" width="39" height="43" alt="Профессиональная селфи-палка">
+                      <p class="cart-item-title">Профессиональная селфи-палка</p>
+                      <button class="cart-item-delete">
+                        <span class="visually-hidden">Удалить товар</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="cart-information-bar">
+                    <span class="cart-items-number">Товаров: 2</span>
+                    <span class="cart-total-price">Сумма: 2000 ₽</span>
+                  </div>
+                  <a class="cart-open-link" href="#">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
