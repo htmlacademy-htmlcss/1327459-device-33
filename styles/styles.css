@@ -409,18 +409,19 @@ body {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 50%;
+  top: calc(50% - 39px);
   width: 100%;
   transform: translateY(-50%);
 }
 
 .slider-prev {
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 .slider-next {
   transform: scale(-1);
   padding-right: 30px;
+  margin-right: -25px;
 }
 
 .slider-button:focus {
@@ -537,6 +538,10 @@ body {
   list-style-type: none;
 }
 
+.bestsellers-item {
+  margin-bottom: 70px;
+}
+
 .bestsellers-title {
   margin: 0;
   margin-top: -28px;
@@ -633,7 +638,6 @@ body {
 
 .categories-list {
   margin: 0;
-  margin-top: 70px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -721,12 +725,12 @@ body {
   display: flex;
   margin: 0;
   margin-bottom: 70px;
-  padding-bottom: 72px;
+  padding-bottom: 94px;
 }
 
 .services-title {
   margin: 0;
-  margin-top: -22px;
+  margin-top: -29px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -740,23 +744,27 @@ body {
 }
 
 .services-description-container {
-  width: 485px;
-  margin-right: 73px;
+  width: 430px;
+  margin-right: 128px;
 }
 
 .services-image {
   display: block;
-  margin-top: -22px;
+  margin-top: -25px;
 }
 
 .services-button-list {
   position: relative;
   width: 280px;
   margin: 0;
-  margin-top: -40px;
-  margin-right: 116px;
+  margin-top: -38px;
+  margin-right: 123px;
   padding: 0;
   list-style: none;
+}
+
+.services-button-item {
+  margin-bottom: 35px;
 }
 
 .services-button-list::before {
