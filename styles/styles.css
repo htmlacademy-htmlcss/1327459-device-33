@@ -2088,6 +2088,10 @@ body {
   right: 40px;
 }
 
+.tooltip-toggle:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
