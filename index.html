@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/outlines.css">
+    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
   </head>
@@ -36,6 +36,36 @@
             </li>
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="visually-hidden">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="images/popover-cart/product-1-small.jpg" width="39" height="43" alt="Любительская селфи-палка">
+                        <p class="cart-item-title">Любительская селфи-палка</p>
+                      </a>
+                      <button class="cart-item-delete">
+                        <span class="visually-hidden">Удалить товар</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="images/popover-cart/product-2-small.jpg" width="39" height="43" alt="Профессиональная селфи-палка">
+                        <p class="cart-item-title">Профессиональная селфи-палка</p>
+                      </a>
+                      <button class="cart-item-delete">
+                        <span class="visually-hidden">Удалить товар</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="cart-information-bar">
+                    <span class="cart-items-number">Товаров: 2</span>
+                    <span class="cart-total-price">Сумма: 2000 ₽</span>
+                  </div>
+                  <a class="cart-open-link" href="#">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -44,40 +74,38 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               Каталог товаров
-              <svg class="catalog-toggler" width="50" height="51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle opacity=".3" cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2"/>
-                <g opacity=".3" clip-path="url(#a)">
+              <svg class="catalog-toggler" width="50" height="51" fill="none" opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2"/>
+                <g clip-path="url(#a)">
                   <path d="M33 24.39h-7v-7h-2v7h-7v2h7v7h2v-7h7v-2Z" fill="#000"/>
                 </g>
                 <defs>
                   <clipPath id="a">
-                    <path fill="#fff" transform="translate(17 17.39)" d="M0 0h16v16H0z"/>
+                    <path fill="#fff" transform="translate(17 16.5)" d="M0 0h16v16H0z"/>
                   </clipPath>
                 </defs>
               </svg>
             </a>
-            <div class="catalog-elements">
-              <ul class="catalog-elements-link-list">
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="catalog.html">Моноподы для cелфи</a>
-                </li>
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="#">Экшн-камеры</a>
-                </li>
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="#">Умные часы</a>
-                </li>
-                <li class="catalog-elements-link-item">
-                  <a class="catalog-elements-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="catalog-elements-link-list">
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="catalog.html">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-elements-link-item">
+                <a class="catalog-elements-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -376,6 +404,7 @@
         </div>
       </div>
     </footer>
+    <!-- Модальное окно -->
 		<div class="modal-container modal-container-close">
 			<div class="modal modal-delivery">
         <button class="modal-close-button">
@@ -385,20 +414,40 @@
           <h2 class="modal-title">Доставка под заказ</h2>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
-              <label for="user-name">Ваше имя:</label>
-              <input class="delivery-form-field field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+              <label class="modal-form-label" for="user-name">Ваше имя:</label>
+              <input class="delivery-form-field user-name-field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+              <span class="notification">Добавьте имя</span>
             </p>
             <p class="field-group">
-              <label for="user-email">Ваш e-mail:</label>
-              <input class="delivery-form-field field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+              <label class="modal-form-label" for="user-email">Ваш e-mail:</label>
+              <input class="delivery-form-field email-field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+              <span class="notification">Забавный у вас адрес</span>
             </p>
             <p class="field-group">
-              <label for="delivery-package">Что нужно привезти:</label>
-              <input class="delivery-form-field field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
+              <label class="modal-form-label" for="delivery-package">Что нужно привезти:</label>
+              <input class="delivery-form-field" type="text" id="delivery-package" name="delivery-package" placeholder="В свободной форме">
             </p>
             <p class="field-group">
-              <label for="delivery-number">Количество:</label>
-              <input class="delivery-form-field field" type="number" id="delivery-number" name="delivery-number" value="1">
+              <span class="modal-form-label form-label-icon">
+                <label class="modal-form-label" for="delivery-number">Количество:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#FFE17F"/>
+                      <path d="M14 7H12V9H14V7Z" fill="black"/>
+                      <path d="M14 11H12V19H14V11Z" fill="black"/>
+                      </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                </span>
+              </span>
+              <button class="delivery-number-button button-minus" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <button class="delivery-number-button button-plus" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+              <input class="delivery-form-field delivery-number-field" type="number" id="delivery-number" name="delivery-number" value="1">
             </p>
             <button class="button" type="submit">Отправить</button>
           </form>
