@@ -281,7 +281,6 @@ body {
 .navigation-item:first-child .navigation-link {
   display: flex;
   align-items: center;
-  z-index: 2;
 }
 
 .catalog-toggler {
@@ -311,6 +310,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  z-index: 2;
 }
 
 .navigation-link:focus {
@@ -335,17 +335,17 @@ body {
   position: absolute;
   box-sizing: border-box;
   left: -60px;
-  top: calc(100% - 20px);
+  top: calc(100% - 30px);
   width: 1160px;
   background-color: #aeff7f;
-  column-gap: 10px;
+  column-gap: 58px;
   row-gap: 5px;
   row-gap: 15px;
-  grid-template-columns: 220px 220px 220px;
+  grid-template-columns: max-content max-content max-content;
   grid-template-rows: 20px 20px 20px;
   list-style-type: none;
-  padding-top: 30px;
-  padding-bottom: 27px;
+  padding-top: 33px;
+  padding-bottom: 57px;
   padding-left: 60px;
   padding-right: 60px;
   z-index: 1;
