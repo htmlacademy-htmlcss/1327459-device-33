@@ -872,8 +872,8 @@ body {
 .advantages-text {
   text-align: center;
   flex-grow: 1;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0;
+  padding: 41px 70px 37px 33px;
 }
 
 .index-columns {
@@ -889,6 +889,7 @@ body {
 .about-title {
   position: relative;
   margin: 0;
+  margin-bottom: 48px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -906,17 +907,19 @@ body {
 
 .about-text {
   margin: 0;
-  margin-top: 48px;
+  margin-bottom: 30px;
   color: #444444;
 }
 
 .delivery-companies-list {
   margin: 0;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-left: 20px;
 }
 
 .delivery-companies-item {
+  padding-left: 16px;
   margin-bottom: 19px;
   font-weight: 700;
   line-height: 20px;
@@ -933,12 +936,13 @@ body {
 }
 
 .contacts {
-  width: 533px;
+  width: 532px;
 }
 
 .contacts-title {
   position: relative;
   margin: 0;
+  margin-bottom: 48px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -956,13 +960,13 @@ body {
 
 .contacts-text {
   margin: 0;
-  margin-top: 48px;
+  margin-bottom: 30px;
   color: #444444;
 }
 
 .contacts-subtitle {
   margin: 0;
-  margin-top: 30px;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 24px;
   color: #444444;
@@ -970,16 +974,17 @@ body {
 
 .contacts-address-text {
   margin: 0;
-  margin-top: 15px;
   color: #444444;
   font-style: normal;
 }
 
 .contacts-phone {
+  display: block;
+  width: max-content;
   margin: 0;
+  margin-bottom: 30px;
   color: #444444;
   font-style: normal;
-  padding: 5px;
 }
 
 .contacts-phone:focus {
@@ -999,8 +1004,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .contacts-schedule-item {
@@ -1025,6 +1029,7 @@ body {
 .newsletter-title {
   margin: 0;
   margin-top: 64px;
+  margin-left: 7px;
   padding: 0;
   width: 400px;
   font-family: "Raleway", sans-serif;
@@ -1104,10 +1109,10 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   border: 3px solid #CECECE;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-right: 39px;
-  padding-left: 39px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 32px;
+  padding-left: 32px;
   transition: 0.3s;
   outline: none;
   outline-offset: 0;
