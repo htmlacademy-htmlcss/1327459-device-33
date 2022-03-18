@@ -1980,6 +1980,11 @@ body {
   width: max-content;
 }
 
+.form-label-icon {
+  position: relative;
+  padding-right: 26px;
+}
+
 .delivery-form-field {
   outline: none;
   border: none;
@@ -2030,53 +2035,64 @@ body {
   color: #FF3D3D;
 }
 
-.help-window {
-  display: none;
-  box-sizing: border-box;
+/* "Тултип" */
+.tooltip {
   position: absolute;
-  left: -20px;
-  top: 33px;
-  background-color: #000000;
-  color: #FFFFFF;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 19px;
-  width: 200px;
+  width: 26px;
+  height: 26px;
+  margin-left: 8px;
+  margin-top: -3px;
+}
+.tooltip-toggle {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
-.help-window::after {
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -34px;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: normal;
+  padding: 19px;
+  width: 200px;
+  z-index: 1;
+}
+
+.tooltip-text::before {
   content: "";
   display: block;
+  width: 14px;
+  height: 6px;
+  background-image: url(../images/modal/tooltip-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 0;
   transform: translateY(-100%);
   right: 40px;
-  background-image: url(../images/modal/help-window-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 14px;
-  height: 6px;
 }
 
-.help-button {
-  position: absolute;
-  display: block;
-  top: -3px;
-  left: 120px;
-  width: 26px;
-  height: 26px;
-  background-image: url(../images/modal/modal-help-icon.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.help-button:focus {
-  outline: 2px solid #AF4FFF;
-}
-
-.help-button:focus + .help-window{
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
+/*  */
 
 .user-name-field {
   background-image: url(../images/modal/modal-user-icon.svg);
