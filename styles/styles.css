@@ -2049,16 +2049,12 @@ body {
   flex-wrap: wrap;
 }
 
-.delivery-form .button {
-  margin-top: -20px;
-}
-
 .field-group {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-bottom: 62px;
+  margin-bottom: 40px;
   padding: 0;
 }
 
