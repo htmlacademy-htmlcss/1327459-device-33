@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
@@ -72,8 +71,7 @@
           <!--Меню сайта-->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              Каталог товаров
+            <a class="navigation-link" href="#">Каталог товаров
               <svg class="catalog-toggler" width="50" height="51" fill="none" opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2"/>
                 <g clip-path="url(#a)">
@@ -86,6 +84,7 @@
                 </defs>
               </svg>
             </a>
+            <!-- Подменю каталога -->
             <ul class="catalog-elements-link-list">
               <li class="catalog-elements-link-item">
                 <a class="catalog-elements-link" href="#">Виртуальная реальность</a>
@@ -187,7 +186,7 @@
                 </div>
               </div>
             </li>
-            <li class="bestsellers-item" hidden>
+            <li class="bestsellers-item">
               <!--Див "Номер слайда"-->
               <div class="slider-number-container">
                 <span class="slider-number">02</span>
@@ -243,7 +242,7 @@
                 </div>
               </div>
             </li>
-            <li class="bestsellers-item" hidden>
+            <li class="bestsellers-item">
               <!--Див "Номер слайда"-->
               <div class="slider-number-container">
                 <span class="slider-number">03</span>
@@ -386,6 +385,42 @@
                 <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </div>
               <img class="services-image" src="images/services-delivery.svg" width="136" height="165" alt="Доставка">
+            </li>
+            <li class="services-item">
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Доставка</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button services-button-current">Гарантия</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Кредит</a>
+                </li>
+              </ul>
+              <div class="services-description-container">
+                <h3 class="services-title">Гарантия</h3>
+                <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              </div>
+              <img class="services-image" src="images/services-warranty.svg" width="171" height="195" alt="Гарантия">
+            </li>
+            <li class="services-item">
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Доставка</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Гарантия</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button services-button-current">Кредит</a>
+                </li>
+              </ul>
+              <div class="services-description-container">
+                <h3 class="services-title">Кредит</h3>
+                <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              </div>
+              <img class="services-image" src="images/services-credit.svg" width="156" height="189" alt="Кредит">
             </li>
           </ul>
         </div>

@@ -69,11 +69,11 @@ body {
 }
 
 .page-header {
+  background-color: #FFE17F;
   min-height: 186px;
   width: 1160px;
   margin: 40px auto 0;
   padding: 0;
-  background-color: #FFE17F;
 }
 /*  */
 
@@ -105,9 +105,8 @@ body {
 /* Навигация пользователя */
 .navigation-user-container {
   width: 1040px;
+  margin: 43px auto 0 auto;
   padding: 0;
-  margin: 0 auto;
-  margin-top: 43px;
   display: flex;
 }
 
@@ -144,11 +143,16 @@ body {
   outline: none;
 }
 
+.search-input:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .search-button {
   box-sizing: border-box;
   padding: 0;
   border: 2px solid black;
-  font-family: inherit;
+  font: inherit;
   font-size: 16px;
   line-height: 20px;
   background-color: transparent;
@@ -173,13 +177,20 @@ body {
   outline: none;
 }
 
+.search-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background-color: transparent;
+  color: #000000;
+}
+
 .navigation-user {
   margin: 0;
   padding: 0;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-user-item {
@@ -237,8 +248,7 @@ body {
 
 .navigation-user-link {
   display: block;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0 5px 0;
   color: inherit;
   text-decoration: none;
 }
@@ -259,11 +269,10 @@ body {
 /* Основная навигация */
 .navigation-list {
   width: 1040px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
   padding: 0;
   display: flex;
-  list-style: none;
+  list-style-type: none;
   align-items: center;
 }
 
@@ -302,8 +311,7 @@ body {
 .navigation-link {
   position: relative;
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -326,10 +334,6 @@ body {
 .navigation-item:not(:nth-child(1)) .navigation-link:active {
   opacity: 0.3;
   outline: none;
-}
-
-.navigation-item:first-child:focus-within .catalog-elements-link-list {
-  display: grid;
 }
 
 /* Подменю каталога */
@@ -368,6 +372,10 @@ body {
 .catalog-elements-link-item:nth-child(5) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+}
+
+.navigation-item:first-child:focus-within .catalog-elements-link-list {
+  display: grid;
 }
 
 .catalog-elements-link {
@@ -636,6 +644,11 @@ body {
 .button:active {
   outline: none;
 }
+
+.button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 /*  */
 
 /* Категории товаров */
@@ -723,7 +736,7 @@ body {
 .services-list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-item {
@@ -765,7 +778,7 @@ body {
   margin-top: -38px;
   margin-right: 123px;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-button-item {
@@ -813,7 +826,7 @@ body {
 .advantages-list {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .advantages-item {
@@ -870,7 +883,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 125px;
-  height: 100px;
+  height: 100%;
   background-color: #FFE17F;
   transition: 0.3s;
 }
@@ -1019,8 +1032,8 @@ body {
 .contacts-schedule {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .contacts-schedule-item {
@@ -1049,14 +1062,12 @@ body {
 }
 
 .newsletter-title {
-  margin: 0;
-  margin-top: 64px;
-  margin-left: 7px;
-  padding: 0;
-  width: 400px;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
+  margin: 64px 0 0 7px;
+  padding: 0;
+  width: 400px;
 }
 
 .newsletter-text {
@@ -1120,6 +1131,12 @@ body {
   border-bottom: 3px solid #FF3D3D;
 }
 
+.newsletter-input:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
 .newsletter-subscribe {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -1131,10 +1148,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   border: 3px solid #CECECE;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding: 15px 32px 15px 32px;
   transition: 0.3s;
   outline: none;
   outline-offset: 0;
@@ -1154,6 +1168,14 @@ body {
   border-color: #CECECE;
   color: rgba(255, 255, 255, 0.3);
   outline: none;
+}
+
+.newsletter-subscribe:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.3);
 }
 /*  */
 
@@ -1214,10 +1236,10 @@ body {
 }
 
 .footer-services-list {
-  list-style: none;
+  list-style-type: none;
   display: flex;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .footer-services-item {
@@ -1385,7 +1407,7 @@ body {
   margin-left: 36px;
 }
 
-.breadcrumbs-item:not(:last-child):after {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1544,6 +1566,7 @@ body {
 
 .control-input:disabled + .control-mark, .control-input:disabled ~ .control-label {
   opacity: 0.1;
+  cursor: not-allowed;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark {
@@ -1673,10 +1696,7 @@ body {
 
 /* Сортировка */
 .sorting-container {
-  padding-left: 40px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  padding-right: 40px;
+  padding: 26px 40px 26px 40px;
   grid-area: sorting;
   display: flex;
   align-items: center;
@@ -1707,10 +1727,7 @@ body {
   font: inherit;
   background-color: transparent;
   appearance: none;
-  padding: 0;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 40px 10px 0;
   margin: 0;
   width: 100%;
   border: none;
@@ -1731,6 +1748,11 @@ body {
 .select-control:active {
   opacity: 0.3;
   outline: none;
+}
+
+.select-control:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .sorting-button {
@@ -2105,7 +2127,9 @@ body {
 }
 
 .delivery-form-field:disabled {
+  background-color: #F0F0F0;
   opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .delivery-form .field-group:nth-child(1) {
@@ -2253,6 +2277,12 @@ body {
 .delivery-number-button:active {
   background-color: #F0F0F0;
   outline: none;
+}
+
+.delivery-number-button:disabled {
+  background-color: #F0F0F0;
+  opacity: 0.1;
+  cursor: not-allowed;
 }
 
 .button-minus {
