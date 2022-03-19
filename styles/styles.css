@@ -466,8 +466,6 @@ body {
   height: 12px;
   border: 2px solid #000000;
   border-radius: 50%;
-
-
 }
 
 .slider-pagination-button:focus {
@@ -806,7 +804,6 @@ body {
   height: 40px;
   width: 280px;
   background-color: #000000;
-
 }
 
 .services-button-current:hover {
@@ -1392,7 +1389,6 @@ body {
   width: 4px;
   height: 7px;
   background-image: url(../images/catalog/breadcrumbs-arrow.svg);
-
 }
 
 .breadcrumbs-item:first-child {
@@ -1466,9 +1462,6 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin: 0;
-}
-
-.catalog-filter-title {
   margin-bottom: 58px;
 }
 
@@ -1476,7 +1469,7 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-legend {
@@ -1496,17 +1489,19 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 /* Кастомные стили для чекбокса и радиокнопки */
 .control {
   position: relative;
   display: block;
-  padding-left: 30px;
+  padding-left: 37px;
   cursor: pointer;
 }
 
@@ -1963,7 +1958,6 @@ body {
 .pagination-link.pagination-prev.pagination-disabled, .pagination-link.pagination-next.pagination-disabled {
   visibility: hidden;
 }
-/*  */
 
 .prev {
   margin-right: auto;
@@ -2222,6 +2216,7 @@ body {
   appearance: none;
   margin: 0;
 }
+
 .delivery-number-button {
   position: absolute;
   bottom: 0;
