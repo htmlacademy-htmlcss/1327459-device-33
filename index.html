@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <!-- <link rel="stylesheet" href="styles/outlines.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
     <header class="page-header">
@@ -28,7 +27,7 @@
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">Войти</a>
             </li>
-            <li class="navigation-user-item"><!--Элемент скрыт на главной, когда пользователь не в системе-->
+            <li class="navigation-user-item" hidden><!--Элемент скрыт на главной, когда пользователь не в системе-->
               <a class="navigation-user-link" href="#">Выйти</a>
             </li>
             <li class="navigation-user-item">
@@ -72,8 +71,7 @@
           <!--Меню сайта-->
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              Каталог товаров
+            <a class="navigation-link" href="#">Каталог товаров
               <svg class="catalog-toggler" width="50" height="51" fill="none" opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="25" cy="25.39" r="24" stroke="#000" stroke-width="2"/>
                 <g clip-path="url(#a)">
@@ -86,6 +84,7 @@
                 </defs>
               </svg>
             </a>
+            <!-- Подменю каталога -->
             <ul class="catalog-elements-link-list">
               <li class="catalog-elements-link-item">
                 <a class="catalog-elements-link" href="#">Виртуальная реальность</a>
@@ -136,7 +135,7 @@
                 <!--Див "Слайдер"-->
                 <div class="slider">
                   <h3 class="visually-hidden">Фотогалерея</h3>
-                  <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото товара">
+                  <img class="slider-image" src="images/gallery/picture-1.png" width="560" height="560" alt="Фото квадрокоптера">
                   <div class="slider-controls">
                     <a class="slider-button slider-prev" href="#">
                       <span class="visually-hidden">Предыдущее фото</span>
@@ -182,6 +181,126 @@
                     <div class="bestsellers-property">
                       <p class="property-text">Радиус поражения</p>
                       <P class="property-value">50 м</P>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="bestsellers-item">
+              <!--Див "Номер слайда"-->
+              <div class="slider-number-container">
+                <span class="slider-number">02</span>
+              </div>
+              <div class="slider-container-1">
+                <!--Див "Слайдер"-->
+                <div class="slider">
+                  <h3 class="visually-hidden">Фотогалерея</h3>
+                  <img class="slider-image" src="images/gallery/picture-2.png" width="560" height="560" alt="Фото фитнес-браслета">
+                  <div class="slider-controls">
+                    <a class="slider-button slider-prev" href="#">
+                      <span class="visually-hidden">Предыдущее фото</span>
+                    </a>
+                    <a class="slider-button slider-next" href="#">
+                      <span class="visually-hidden">Следующее фото</span>
+                    </a>
+                  </div>
+                </div>
+                <!--Див "Описание товара"-->
+                <div class="bestsellers-card">
+                  <h3 class="visually-hidden">Описание товара</h3>
+                  <h4 class="bestsellers-title">Худеем<br> правильно!</h4>
+                  <p class="bestsellers-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                  <div class="slider-container-2">
+                    <a class="button" href="#">Подробнее</a>
+                    <!--Див "Пагинация для слайдера"-->
+                    <div class="slider-pagination">
+                      <ol class="slider-pagination-list">
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="visually-hidden">1 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button slider-pagination-button-current">
+                            <span class="visually-hidden">2 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="visually-hidden">3 фото</span>
+                          </a>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="bestsellers-properties-container">
+                    <div class="bestsellers-property">
+                      <p class="property-text">Без подзарядки</p>
+                      <P class="property-value">48 часов</P>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="bestsellers-item">
+              <!--Див "Номер слайда"-->
+              <div class="slider-number-container">
+                <span class="slider-number">03</span>
+              </div>
+              <div class="slider-container-1">
+                <!--Див "Слайдер"-->
+                <div class="slider">
+                  <h3 class="visually-hidden">Фотогалерея</h3>
+                  <img class="slider-image" src="images/gallery/picture-3.png" width="560" height="560" alt="Фото селфи-палки">
+                  <div class="slider-controls">
+                    <a class="slider-button slider-prev" href="#">
+                      <span class="visually-hidden">Предыдущее фото</span>
+                    </a>
+                    <a class="slider-button slider-next" href="#">
+                      <span class="visually-hidden">Следующее фото</span>
+                    </a>
+                  </div>
+                </div>
+                <!--Див "Описание товара"-->
+                <div class="bestsellers-card">
+                  <h3 class="visually-hidden">Описание товара</h3>
+                  <h4 class="bestsellers-title">Делай селфи,<br> как Бен Стиллер!</h4>
+                  <p class="bestsellers-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+                  <div class="slider-container-2">
+                    <a class="button" href="#">Подробнее</a>
+                    <!--Див "Пагинация для слайдера"-->
+                    <div class="slider-pagination">
+                      <ol class="slider-pagination-list">
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="visually-hidden">1 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button" href="#">
+                            <span class="visually-hidden">2 фото</span>
+                          </a>
+                        </li>
+                        <li class="slider-pagination-item">
+                          <a class="slider-pagination-button slider-pagination-button-current">
+                            <span class="visually-hidden">3 фото</span>
+                          </a>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="bestsellers-properties-container">
+                    <div class="bestsellers-property">
+                      <p class="property-text">Длина палки</p>
+                      <P class="property-value">8,5 м</P>
+                    </div>
+                    <div class="bestsellers-property">
+                      <p class="property-text">Вес палки</p>
+                      <P class="property-value">5 кг</P>
+                    </div>
+                    <div class="bestsellers-property">
+                      <p class="property-text">Материал</p>
+                      <P class="property-value">Карбон</P>
                     </div>
                   </div>
                 </div>
@@ -267,6 +386,42 @@
               </div>
               <img class="services-image" src="images/services-delivery.svg" width="136" height="165" alt="Доставка">
             </li>
+            <li class="services-item">
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Доставка</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button services-button-current">Гарантия</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Кредит</a>
+                </li>
+              </ul>
+              <div class="services-description-container">
+                <h3 class="services-title">Гарантия</h3>
+                <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              </div>
+              <img class="services-image" src="images/services-warranty.svg" width="171" height="195" alt="Гарантия">
+            </li>
+            <li class="services-item">
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Доставка</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button" href="#">Гарантия</a>
+                </li>
+                <li class="services-button-item">
+                  <a class="button services-button services-button-current">Кредит</a>
+                </li>
+              </ul>
+              <div class="services-description-container">
+                <h3 class="services-title">Кредит</h3>
+                <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              </div>
+              <img class="services-image" src="images/services-credit.svg" width="156" height="189" alt="Кредит">
+            </li>
           </ul>
         </div>
       </section>
@@ -342,7 +497,7 @@
           <svg class="footer-logo-icon" width="145" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9ZM83.46 0v10.1L91.06 0h-7.6Z" fill="currentColor"/></svg>
           <span class="visually-hidden">Логотип магазина «Девайс»</span>
         </a>
-        <div class="footer-group-1-container">
+        <div class="footer-group-container">
           <!--Секция "Адрес" в футере-->
           <section class="footer-contacts-address">
             <h2 class="visually-hidden">Адрес магазина</h2>
@@ -369,7 +524,7 @@
             <a class="footer-contacts-phone-number" href="tel:88128121212">Тел.: +7 (812) 812-12-12</a>
           </section>
         </div>
-        <div class="footer-group-2-container">
+        <div class="footer-group-container">
           <!--Декоративный элемент-->
           <div class="footer-decorative"></div>
           <!--Секция "Социальные сети"-->
