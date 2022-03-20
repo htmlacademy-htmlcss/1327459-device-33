@@ -68,7 +68,7 @@
             </li>
           </ul>
         </div>
-          <!--Меню сайта-->
+        <!--Меню сайта-->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Каталог товаров
@@ -186,7 +186,7 @@
                 </div>
               </div>
             </li>
-            <li class="bestsellers-item">
+            <li class="bestsellers-item element-hidden">
               <!--Див "Номер слайда"-->
               <div class="slider-number-container">
                 <span class="slider-number">02</span>
@@ -242,7 +242,7 @@
                 </div>
               </div>
             </li>
-            <li class="bestsellers-item">
+            <li class="bestsellers-item element-hidden">
               <!--Див "Номер слайда"-->
               <div class="slider-number-container">
                 <span class="slider-number">03</span>
@@ -386,7 +386,7 @@
               </div>
               <img class="services-image" src="images/services-delivery.svg" width="136" height="165" alt="Доставка">
             </li>
-            <li class="services-item">
+            <li class="services-item element-hidden">
               <ul class="services-button-list">
                 <li class="services-button-item">
                   <a class="button services-button" href="#">Доставка</a>
@@ -404,7 +404,7 @@
               </div>
               <img class="services-image" src="images/services-warranty.svg" width="171" height="195" alt="Гарантия">
             </li>
-            <li class="services-item">
+            <li class="services-item element-hidden">
               <ul class="services-button-list">
                 <li class="services-button-item">
                   <a class="button services-button" href="#">Доставка</a>
@@ -482,7 +482,7 @@
           <div class="newsletter-container">
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="e-mail">Ваш e-mail</label>
-              <input class="newsletter-input" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail">
+              <input class="newsletter-input" type="email" name="e-mail" id="e-mail" placeholder="Ваш e-mail" required>
               <button class="newsletter-subscribe" type="submit">Подписаться</button>
             </form>
             <p class="newsletter-text-fiture">Это бесплатно</p>
@@ -570,12 +570,12 @@
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
               <label class="modal-form-label" for="user-name">Ваше имя:</label>
-              <input class="delivery-form-field user-name-field" type="text" id="user-name" name="user-name" placeholder="Введите имя">
+              <input class="delivery-form-field user-name-field" type="text" id="user-name" name="user-name" placeholder="Введите имя" required>
               <span class="notification">Добавьте имя</span>
             </p>
             <p class="field-group">
               <label class="modal-form-label" for="user-email">Ваш e-mail:</label>
-              <input class="delivery-form-field email-field" type="email" id="user-email" name="user-email" placeholder="Введите почту">
+              <input class="delivery-form-field email-field" type="email" id="user-email" name="user-email" placeholder="Введите почту" required>
               <span class="notification">Забавный у вас адрес</span>
             </p>
             <p class="field-group">

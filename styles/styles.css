@@ -75,7 +75,6 @@ body {
   margin: 40px auto 0;
   padding: 0;
 }
-/*  */
 
 /* Хедер */
 .header-index-link {
@@ -1127,8 +1126,8 @@ body {
   outline: none;
 }
 
-.newsletter-input:invalid {
-  border-bottom: 3px solid #FF3D3D;
+.newsletter-input:not(:placeholder-shown):invalid {
+  border-bottom: 3px solid #FF3D3D;;
 }
 
 .newsletter-input:disabled {
@@ -1901,11 +1900,10 @@ body {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
-  color: inherit;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .product-list-button:focus {
@@ -1919,6 +1917,11 @@ body {
 .product-list-button:active {
   opacity: 0.3;
   outline: none;
+}
+
+.product-list-button:disabled {
+  cursor: not-allowed;
+  border: 3px solid #F0F0F0;
 }
 /*  */
 
@@ -2151,11 +2154,89 @@ body {
 .notification {
   font-size: 14px;
   line-height: 20px;
+  visibility: hidden;
 }
 
-.email-field + .notification {
-  visibility: hidden;
+.user-name-field {
+  background-image: url(../images/modal/modal-user-icon.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  padding-right: 55px;
+}
+
+.user-name-field:placeholder-shown + .notification {
+  visibility: visible;
+}
+
+.email-field {
+  background-image: url(../images/modal/post-icon.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  padding-right: 55px;
+}
+
+.email-field:not(:placeholder-shown):invalid {
+  border: 2px solid #FF3D3D;
+}
+
+.email-field:not(:placeholder-shown):invalid + .notification {
   color: #FF3D3D;
+  visibility: visible;
+}
+
+.delivery-number-field {
+  text-align: center;
+  appearance: textfield;
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.delivery-number-field::-webkit-outer-spin-button,
+.delivery-number-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.delivery-number-button {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.delivery-number-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-number-button:hover {
+  background-color: #DCDCDC;
+}
+
+.delivery-number-button:active {
+  background-color: #F0F0F0;
+  outline: none;
+}
+
+.delivery-number-button:disabled {
+  background-color: #F0F0F0;
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.button-minus {
+  left: 0;
+  background-image: url(../images/modal/modal-number-less.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-plus {
+  right: 0;
+  background-image: url(../images/modal/modal-number-more.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* "Тултип" */
@@ -2219,84 +2300,6 @@ body {
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
-}
-/*  */
-
-.user-name-field {
-  background-image: url(../images/modal/modal-user-icon.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 20px) center;
-  padding-right: 55px;
-}
-
-.email-field {
-  background-image: url(../images/modal/post-icon.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 20px) center;
-  padding-right: 55px;
-}
-
-.email-field:invalid {
-  border: 2px solid #FF3D3D;
-}
-
-.email-field:invalid + .notification {
-  visibility: visible;
-}
-
-.delivery-number-field {
-  text-align: center;
-  appearance: textfield;
-  padding-left: 62px;
-  padding-right: 62px;
-}
-
-.delivery-number-field::-webkit-outer-spin-button,
-.delivery-number-field::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.delivery-number-button {
-  position: absolute;
-  bottom: 0;
-  width: 60px;
-  height: 60px;
-  border: none;
-  cursor: pointer;
-}
-
-.delivery-number-button:focus {
-  outline: 2px solid #AF4FFF;
-}
-
-.delivery-number-button:hover {
-  background-color: #DCDCDC;
-}
-
-.delivery-number-button:active {
-  background-color: #F0F0F0;
-  outline: none;
-}
-
-.delivery-number-button:disabled {
-  background-color: #F0F0F0;
-  opacity: 0.1;
-  cursor: not-allowed;
-}
-
-.button-minus {
-  left: 0;
-  background-image: url(../images/modal/modal-number-less.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.button-plus {
-  right: 0;
-  background-image: url(../images/modal/modal-number-more.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 /*  */
 
@@ -2442,5 +2445,11 @@ body {
 
 .navigation-user-item:nth-child(4) .navigation-user-link:focus-within + .popover-cart {
   display: block;
+}
+/*  */
+
+/* Для скрытия доп. элементов */
+.element-hidden {
+  display: none;
 }
 /*  */
